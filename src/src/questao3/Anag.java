@@ -1,5 +1,8 @@
 package src.questao3;
-
+/*
+ *  Classe questao3, algoritmo que mostre na tela uma escada de tamanho a quantidade de anagramas de um palavra x
+ * 
+ */
 import java.util.ArrayList;
 
 public class Anag {
@@ -7,8 +10,17 @@ public class Anag {
 	private ArrayList<String> listaDeAnagramas = new ArrayList<String>();
 
 	void anagm(String str, int start, int end) {
+		/**
+		 * Comando de repeticao que verifica a quantidade de anagramas que a palavra fornecida pelo usuario gera 
+		 * 		 
+		 * @param int numberSteps -> número drepetiçoes ocorridas
+		 * 
+		 * @brief -> deve explicacao de funcao 
+		 * 
+	     * @return -> tipo do retorno e qual o retorno da funcao	
+	  	 */
 		if (start == end) {
-//			System.out.println(str);
+
 			setListaDeAnagramas(str);
 		} else {
 

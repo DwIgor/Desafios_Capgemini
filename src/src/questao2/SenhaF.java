@@ -1,7 +1,22 @@
 package src.questao2;
 
+/** Classe SenhaF, onde estao contidos os parammetros
+ *  e metodos para a realização do exercicio
+ 	
+ *
+ */
 public class SenhaF {
 
+/*
+ *  @param int numberSteps -> número de caracteres desejados
+ *  
+ *  
+ *  @brief -> deve explicacao de funcao 
+ *  
+ *  
+ *  @return -> tipo do retorno e qual o retorno da funcao
+ * */
+	
 	public int FaltaNCaracter(String senha) {
 		if (senha.length() <= 6)
 			return 6 - senha.length();
