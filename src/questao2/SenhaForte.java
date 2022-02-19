@@ -1,29 +1,29 @@
-package src.questao2;
+package questao2;
 
-/** Classe SenhaF, onde estao contidos os parammetros
- *  e metodos para a realização do exercicio
- 	
- *
- */
-public class SenhaF {
+public class SenhaForte {
 
-/*
- *  @param int numberSteps -> número de caracteres desejados
- *  
- *  
- *  @brief -> deve explicacao de funcao 
- *  
- *  
- *  @return -> tipo do retorno e qual o retorno da funcao
- * */
-	
+	/*
+	 * @brief verifica quantos caracteres estao faltando
+	 * 
+	 * @param recebe a senha a ser contada
+	 * 
+	 * @return in numero de cacteres faltantes
+	 */
 	public int FaltaNCaracter(String senha) {
 		if (senha.length() <= 6)
 			return 6 - senha.length();
 		return 0;
 	}
 
-	public int VefificarParametrosDaSenha(String senha) {
+	/*
+	 * @brief verifica se não preencheu algum requisito
+	 * 
+	 * @param recebe a senha a ser revificada
+	 * 
+	 * @return retona o numero de requisitos caractes que faltam para preencher os
+	 * resquisitos
+	 */
+	public int VerificarParametrosDaSenha(String senha) {
 		char senhaChar[] = senha.toCharArray();
 		boolean temLetraMaiuscula = false, temLetraMinuscula = false, temCaracteresEspeciais = false,
 				TemDigitos = false;
@@ -47,8 +47,7 @@ public class SenhaF {
 
 		if (senha.length() < 6) {
 			caracteresFaltantes = FaltaNCaracter(senha);
-		}
-		else {
+		} else {
 			if (!temLetraMaiuscula) {
 				caracteresFaltantes++;
 			}
@@ -60,7 +59,7 @@ public class SenhaF {
 			}
 			if (!TemDigitos) {
 				caracteresFaltantes++;
-			}			
+			}
 		}
 		return caracteresFaltantes;
 
